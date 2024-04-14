@@ -21,7 +21,7 @@ setup(
      install_requires=[
          "scipy>=1.3.2",
          "matplotlib>=3.0.0",
-         "gym[atari]>=0.14.0",
+         "gym[atari]==0.14.0",
          "easy-tf-log==1.1",
          "tensorflow~=1.15.2",
      ],

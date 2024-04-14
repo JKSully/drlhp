@@ -5,10 +5,11 @@ import logging
 
 def main():
     env = gym.make('PongNoFrameskip-v4')
+    # env = gym.make('ALE/Pong-v5')
     env.seed(0)
 
     wrapped_env = HumanPreferencesEnvWrapper(env, segment_length=10, synthetic_prefs=False, 
-                                             n_initial_training_steps=10000, env_wrapper_log_level=logging.DEBUG, 
+                                             n_initial_training_steps=10, env_wrapper_log_level=logging.DEBUG, 
                                              reward_predictor_log_level=logging.DEBUG, pref_interface_log_level=logging.DEBUG)
 
     logging.basicConfig(level=logging.INFO)
